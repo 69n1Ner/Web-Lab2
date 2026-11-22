@@ -1,0 +1,146 @@
+body {
+    font-family: "Cambria Math", serif;
+    display: grid;
+    grid-template-rows: auto 1fr ;
+    min-height: calc(100vh - 16px);
+    gap: 4px 0;
+}
+
+.cap, .bottom {
+    font-family: sans-serif;
+    color: #ef8739;
+    font-size: 3em;
+    padding: 8px 0;
+}
+
+.cap p{
+    text-align: right;
+}
+
+.bottom {
+    align-self: end;
+    font-size: 1em;
+    text-align: center;
+}
+
+.bottom a:visited{
+    color: #5c835c;
+}
+.bottom a:hover{
+    color: #69dc00;
+}
+
+.bottom p, .cap p {
+    margin: 0 4px;
+}
+
+.hit::after{
+    content: "✔";
+    color: green;
+}
+
+.miss::before {
+    content: "✘";
+    color: darkred;
+}
+
+#result-table th,
+#result-table td {
+    padding: 6px 10px;
+    text-align: center;
+}
+
+#result-table td {
+    border-bottom: 1px solid #ef8739;
+}
+
+#result-table th {
+    position: sticky;
+    top: 0;
+    background-color: #a1c8fb;
+}
+
+#result-table{
+    border-collapse: collapse;
+}
+
+#table-wrapper{
+    grid-area: table;
+    overflow: auto;
+    justify-self: start;
+    height: 0;
+    min-height: 100%;
+}
+
+#drawings {
+    display: grid;
+    grid-template-columns: 3fr 1fr 2fr;
+    grid-template-areas: "graphic form table";
+    grid-column-gap: 20px;
+    place-content: center;
+}
+
+
+#graphic {
+    grid-area: graphic;
+    place-self: center;
+}
+
+#graph-form{
+    grid-area: form;
+    place-self: center;
+    display: grid;
+    place-items: center;
+}
+
+#graph-form > p {
+    text-align: center;
+}
+
+#graph-form input:user-invalid {
+    color: red;
+}
+
+#graph-form input:focus,
+#graph-form select:focus,
+#graph-form button:focus {
+    outline: 2px solid #ef8739;
+    outline-offset: 2px;
+}
+
+legend {
+    background-color: #a1c8fb;
+    padding: 3px 6px;
+    /*text-align: center;*/
+}
+
+.zero {
+    display: grid;
+    align-content: center;
+}
+
+fieldset{
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(3, 35px);
+    grid-auto-flow: column;
+    gap: 6px 10px;
+}
+
+button {
+    background-color: #fbc3a1;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px hsl(0 100% 50%);
+}
+
+.input-error {
+    position: absolute;
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 6px 10px;
+}
+

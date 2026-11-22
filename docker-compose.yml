@@ -1,0 +1,9 @@
+services:
+  fcgi:
+    build: ./fcgi
+  web:
+    build: ./web
+    ports:
+      - "1010:80"
+    depends_on:
+      - fcgi

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <title>Lab 1</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+<div class="cap">
+    <p>Тайлаков Константин Евгеньевич P3206 505454</p>
+</div>
+<div id="drawings">
+    <canvas class="graphic" id="graphic" width="500" height="500"></canvas>
+    <form id="graph-form" enctype="application/x-www-form-urlencoded">
+
+        <p><label>Изменение X:
+            <input type="text" id="data-x" required pattern="-?\d+([.,]\d+)?" inputmode="decimal"
+                   title="Число от -5 до 5" placeholder="Введите число...">
+        </label></p>
+
+        <fieldset id="data-y">
+            <legend>Изменение Y:</legend>
+            <div class="negative">
+                <label><input type="checkbox" name="data-y" value="-1">-1</label>
+                <label><input type="checkbox" name="data-y" value="-2">-2</label>
+                <label><input type="checkbox" name="data-y" value="-3">-3</label>
+                <label><input type="checkbox" name="data-y" value="-4">-4</label>
+            </div>
+            <div class="zero">
+                <label><input type="checkbox" name="data-y" value="0">0</label>
+            </div>
+            <div class="positive">
+                <label><input type="checkbox" name="data-y" value="1">1</label>
+                <label><input type="checkbox" name="data-y" value="2">2</label>
+                <label><input type="checkbox" name="data-y" value="3">3</label>
+                <label><input type="checkbox" name="data-y" value="4">4</label>
+            </div>
+        </fieldset>
+
+        <p><label>Изменение R:
+            <select id="data-r" required>
+                <option value="1">1</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
+                <option value="3">3</option>
+            </select>
+        </label></p>
+
+        <button class="rgb-box" type="submit">Проверить</button>
+
+    </form>
+    <div id="table-wrapper">
+        <table id="result-table">
+            <thead>
+            <tr>
+                <th>X</th>
+                <th>Y</th>
+                <th>R</th>
+                <th>Попадание</th>
+                <th>Дата</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</div>
+
+
+<div class="bottom">
+    <a href="https://github.com/69n1Ner/Web-programming/tree/lab-1">ссылка на GitHub репозиторий лабы</a>
+</div>
+
+
+</body>
